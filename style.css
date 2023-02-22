@@ -3,6 +3,9 @@
     padding: 0;
 }
 
+a{
+    text-decoration: none;
+}
 .header{
     background-color: black;
     height: 30px;
@@ -60,31 +63,129 @@
 .navbar .shopping-cart, .navbar .login{
     display: flex;
     justify-content: space-between;
-    width: 85px;
+    width: 95px;
     font-size: 17px;
+    font-family: arial;
 }
 
-ul{
+.menu ul{
     display: flex;
     justify-content: center;
     align-items: center;
     /* height: 70px; */
 }
 
-ul li{
+.menu ul li{
     list-style: none;
     margin: 0 auto;
     font-size: 18px;
 } 
 
-ul li a{
+.menu ul li a{
     text-decoration: none;
     color: gray;
     font-family: arial;
     font-weight: 300;
 }
 
-ul li a:hover{
+.menu ul li a:hover{
     transition: 0.5s;
     color: black;
+}
+
+.sub-menu1{
+    display: none;
+}
+
+.menu ul li:hover .sub-menu1{
+    display: block;
+    position: absolute;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background: aliceblue;
+    margin-left: -10px;
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.menu ul li:hover .sub-menu1 ul{
+    display: block;
+    margin: 10px;
+}
+
+.menu ul li:hover .sub-menu1 ul li{
+    width: 130px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    text-align: left;
+    transition: 0.7s;
+}
+.menu ul li:hover .sub-menu1 ul li:hover{
+    color: black;
+    transition: 0.7s;
+}
+.menu ul li:hover .sub-menu1 ul li a:hover{
+    color: black;
+    transition: 0.7s;
+}
+
+.login a{
+    color: gray;
+    font-family: arial;
+    font-weight: 300;
+}
+
+.shopping-cart a{
+    color: gray;
+    font-family: arial;
+    font-weight: 300;
+}
+
+.new-product{
+    
+}
+
+.new-product-title{
+    text-align: center;
+    margin: 30px 0 30px 0;
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-weight: 600;
+}
+
+.new-product .card-img-top{
+    width: 321px;
+    height: 482px;
+}
+
+.container{
+    height: 550px;
+}
+
+.row{
+    text-align: center;
+    height: 100%;
+}
+
+.col {
+    float: left;
+    /* padding-left: 8px;
+    padding-right: 8px; */
+}
+
+.col-sm-3 {
+    width: 25%;
+}
+
+.container .card-title{
+    display: inline-block;
+    font-size: 14px;
+    color: #8A8A8F;
+    font-family: 'Nanum Gothic Coding', monospace;
+    padding: 8px 0 8px 0;
+}
+
+.container .card-text{
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Nanum Gothic Coding', monospace;
 }
